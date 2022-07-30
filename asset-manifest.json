@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_ios_calculator/static/css/main.a3fa67ac.css",
+    "main.js": "/react_ios_calculator/static/js/main.804076d5.js",
+    "index.html": "/react_ios_calculator/index.html",
+    "main.a3fa67ac.css.map": "/react_ios_calculator/static/css/main.a3fa67ac.css.map",
+    "main.804076d5.js.map": "/react_ios_calculator/static/js/main.804076d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3fa67ac.css",
+    "static/js/main.804076d5.js"
+  ]
+}

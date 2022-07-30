@@ -1,13 +1,156 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  /* -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: none; */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: rgb(143, 138, 125);
+  display: grid;
+  place-content: center;
+  font-family:'Times New Roman', Times, serif;
+  height: 100vh;
+  font-size: 2rem;
+}
+.react-calculator {
+  height: 80vh;
+  width: 70vh;
+  background-color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  display: grid;
+  grid-template-rows: 25% 1fr;
+}
+
+.result-panel {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  background-color: #e3e7e9;
+  text-align: right;
+  padding: 0px .5rem;
+  line-height: 2rem;
+  overflow: hidden;
+}
+.cur-row {
+  flex: 1;
+  color: hsl(214, 5%, 29%);
+  font-size: 30px;
+  max-width: 100%;
+  background-color: inherit !important;
+  border: none;
+  outline: none;
+  text-align: right !important;
+}
+
+.last-row {
+  flex: 1;
+  color: #969ba3;
+  font-size: 20px;
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+
+
+.button-panel{
+  flex: 5;
+}
+
+.button-panel .button {
+  display: grid;
+    place-content: center;
+    background-color: rgb(54, 52, 52);
+    border-radius: 40%;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #aaa;
+  opacity: 0;
+}
+.button:hover {
+  background-color: gray;
+}
+
+.button-panel .clicked:before {
+  animation: react-calculator-click .5s ease-out 0s 1 alternate forwards;
+}
+
+.last {
+  color: #fff;
+  background-color: rgb(237, 141, 53) !important;
+}
+
+.button-panel:focus{
+  outline: none;
+}
+
+@keyframes react-calculator-click {
+  0% {
+      transform: scale(1);
+      opacity: .7;
+  }
+  100% {
+      transform: scale(3);
+      opacity: 0;
+  }
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.s1 { flex: 1; }
+.s2 { flex: 2; }
+.s3 { flex: 3; }
+.s4 { flex: 4; }
+.s5 { flex: 5; }
+.s6 { flex: 6; }
+.s7 { flex: 7; }
+.s8 { flex: 8; }
+.s9 { flex: 9; }
+.s10 { flex: 10; }
+.s11 { flex: 11; }
+.s12 { flex: 12; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
